@@ -203,18 +203,26 @@ nav {
 ───────────────────────────────────────── */
 .section {
   display: none;
+  opacity: 0;
 }
 
 .section.active {
   display: block;
+  opacity: 1;
+  animation: section-fade 0.3s ease;
+}
+
+@keyframes section-fade {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 /* ─────────────────────────────────────────
    5. HERO (HOME)
 ───────────────────────────────────────── */
+/* Sem display:flex aqui — controlado por .section.active */
 #home {
   min-height: 100vh;
-  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -222,6 +230,9 @@ nav {
   text-align: center;
   position: relative;
   overflow: hidden;
+}
+#home.active {
+  display: flex;
 }
 
 /* Efeito de brilho animado ao fundo */
