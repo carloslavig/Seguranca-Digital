@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Segurança Digital | Digital Security</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;1,9..144,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════
+       NAVEGAÇÃO
+  ══════════════════════════════ -->
+  <nav>
+    <div class="nav-inner">
+      <a class="nav-logo" href="#" onclick="showSection('home');return false;">
+        🔐 <span data-pt="Segurança Digital" data-en="Digital Security">Segurança Digital</span>
+      </a>
+
+      <button class="hamburger" id="hamburger" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a class="active" onclick="showSection('home');return false;"      data-pt="Início"           data-en="Home">Início</a></li>
+        <li><a onclick="showSection('ataques');return false;"                  data-pt="Como Acontece"    data-en="How It Happens">Como Acontece</a></li>
+        <li><a onclick="showSection('dicas');return false;"                    data-pt="Como se Proteger" data-en="Stay Safe">Como se Proteger</a></li>
+        <li><a onclick="showSection('checklist');return false;"                data-pt="Checklist"        data-en="Checklist">Checklist</a></li>
+        <li><a onclick="showSection('sobre');return false;"                    data-pt="Sobre"            data-en="About">Sobre</a></li>
+      </ul>
+
+      <div class="nav-controls">
+        <button class="lang-btn" id="langBtn" onclick="toggleLang()">EN</button>
+        <button class="icon-btn" id="themeBtn" title="Alternar tema">🌙</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════
+       SEÇÃO: HOME
+  ══════════════════════════════ -->
+  <section class="section active" id="home">
+    <div class="hero-glow"></div>
+
+    <div class="hero-badge"
+      data-pt="🛡️ Atividade Extensionista — Segurança Digital"
+      data-en="🛡️ University Extension — Digital Security">
+      🛡️ Atividade Extensionista — Segurança Digital
+    </div>
+
+    <h1 class="hero-title"
+      data-pt="Não deixe os golpistas<br/><em>enganarem você</em>."
+      data-en="Don't let scammers<br/><em>fool you</em>.">
+      Não deixe os golpistas<br/><em>enganarem você</em>.
+    </h1>
+
+    <p class="hero-sub"
+      data-pt="Informação clara e prática sobre engenharia social — o golpe que começa com uma conversa. Aprenda a se proteger com linguagem simples e direta."
+      data-en="Clear, practical information about social engineering — the scam that starts with a conversation. Learn to protect yourself in plain, direct language.">
+      Informação clara e prática sobre engenharia social — o golpe que começa com uma conversa. Aprenda a se proteger com linguagem simples e direta.
+    </p>
+
+    <div class="hero-actions">
+      <button class="btn btn-primary" onclick="showSection('ataques')"
+        data-pt="🔍 Ver como os golpes funcionam"
+        data-en="🔍 See how scams work">
+        🔍 Ver como os golpes funcionam
+      </button>
+      <button class="btn btn-outline" onclick="showSection('dicas')"
+        data-pt="✅ Como me proteger"
+        data-en="✅ How to protect myself">
+        ✅ Como me proteger
+      </button>
+    </div>
+
+    <div class="stats-bar">
+      <div class="stat-card">
+        <span class="stat-number">70%</span>
+        <span class="stat-label"
+          data-pt="das vítimas têm mais de 50 anos"
+          data-en="of victims are over 50 years old">
+          das vítimas têm<br/>mais de 50 anos
+        </span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number">R$3bi</span>
+        <span class="stat-label"
+          data-pt="perdidos por golpes digitais no Brasil"
+          data-en="lost to digital scams in Brazil">
+          perdidos por golpes<br/>digitais no Brasil
+        </span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number">90%</span>
+        <span class="stat-label"
+          data-pt="dos golpes usam engenharia social"
+          data-en="of scams use social engineering">
+          dos golpes usam<br/>engenharia social
+        </span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number">0 R$</span>
+        <span class="stat-label"
+          data-pt="custo da prevenção com informação"
+          data-en="cost of prevention through awareness">
+          custo da prevenção<br/>com informação
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       SEÇÃO: COMO OS GOLPES ACONTECEM
+  ══════════════════════════════ -->
+  <section class="section" id="ataques">
+    <div class="page">
+      <div class="page-header reveal">
+        <h2 data-pt="Como os Golpes Acontecem" data-en="How Scams Happen">Como os Golpes Acontecem</h2>
+        <div class="accent-line"></div>
+        <p data-pt="Entenda as táticas mais comuns usadas por golpistas digitais para enganar pessoas"
+           data-en="Understand the most common tactics digital scammers use to deceive people">
+          Entenda as táticas mais comuns usadas por golpistas digitais para enganar pessoas
+        </p>
+      </div>
+
+      <div class="alert-banner reveal">
+        ⚠️
+        <span
+          data-pt="<strong>Atenção:</strong> Golpistas aproveitam a confiança e a boa-fé das pessoas. Conhecer os truques é a melhor defesa."
+          data-en="<strong>Warning:</strong> Scammers exploit people's trust and goodwill. Knowing their tricks is the best defense.">
+          <strong>Atenção:</strong> Golpistas aproveitam a confiança e a boa-fé das pessoas. Conhecer os truques é a melhor defesa.
+        </span>
+      </div>
+
+      <div class="grid-2">
+
+        <div class="attack-card reveal">
+          <span class="card-icon">📧</span>
+          <span class="card-tag">Phishing</span>
+          <h3 data-pt="E-mail ou Mensagem Falsa" data-en="Fake Email or Message">E-mail ou Mensagem Falsa</h3>
+          <p data-pt="O golpista envia um e-mail ou mensagem de WhatsApp fingindo ser seu banco, Correios ou Receita Federal. A mensagem pede que você clique em um link ou forneça seus dados pessoais."
+             data-en="The scammer sends an email or WhatsApp message pretending to be your bank, postal service, or tax authority. The message asks you to click a link or provide personal information.">
+            O golpista envia um e-mail ou mensagem de WhatsApp fingindo ser seu banco, Correios ou Receita Federal. A mensagem pede que você clique em um link ou forneça seus dados pessoais.
+          </p>
+          <div class="example-box">
+            <strong data-pt="Exemplo Real" data-en="Real Example">Exemplo Real</strong>
+            <span data-pt='"Seu CPF foi suspenso. Clique aqui para regularizar sua situação na Receita Federal urgentemente."'
+                  data-en='"Your account has been suspended. Click here to verify your information immediately."'>
+              "Seu CPF foi suspenso. Clique aqui para regularizar sua situação na Receita Federal urgentemente."
+            </span>
+          </div>
+        </div>
+
+        <div class="attack-card reveal">
+          <span class="card-icon">📞</span>
+          <span class="card-tag">Vishing</span>
+          <h3 data-pt="Golpe por Ligação Telefônica" data-en="Phone Call Scam">Golpe por Ligação Telefônica</h3>
+          <p data-pt="Uma pessoa liga se passando por funcionário do banco ou da polícia. Criam urgência para que você forneça senhas ou faça uma transferência."
+             data-en="Someone calls pretending to be a bank employee or police officer. They create urgency so you hand over passwords or make a transfer.">
+            Uma pessoa liga se passando por funcionário do banco ou da polícia. Criam urgência para que você forneça senhas ou faça uma transferência.
+          </p>
+          <div class="example-box">
+            <strong data-pt="Exemplo Real" data-en="Real Example">Exemplo Real</strong>
+            <span data-pt='"Detectamos uma compra suspeita. Para cancelar, precisamos confirmar seus dados agora."'
+                  data-en='"We detected suspicious activity. To stop it, we need to confirm your details right now."'>
+              "Detectamos uma compra suspeita. Para cancelar, precisamos confirmar seus dados agora."
+            </span>
+          </div>
+        </div>
+
+        <div class="attack-card reveal">
+          <span class="card-icon">💬</span>
+          <span class="card-tag" data-pt="Golpe do WhatsApp" data-en="WhatsApp Scam">Golpe do WhatsApp</span>
+          <h3 data-pt="Familiar ou Amigo em Apuros" data-en="Family Member in Trouble">Familiar ou Amigo em Apuros</h3>
+          <p data-pt="O golpista clona o número de um familiar e pede dinheiro urgente alegando estar em apuros — acidente, hospital ou prisão. A mensagem vem do número real da pessoa."
+             data-en="The scammer clones a relative's number and asks for urgent money, claiming to be in trouble — accident, hospital, or arrest. The message comes from the real number.">
+            O golpista clona o número de um familiar e pede dinheiro urgente alegando estar em apuros — acidente, hospital ou prisão. A mensagem vem do número real da pessoa.
+          </p>
+          <div class="example-box">
+            <strong data-pt="Exemplo Real" data-en="Real Example">Exemplo Real</strong>
+            <span data-pt='"Mãe, troquei de número. Estou em apuros, preciso de uma transferência urgente."'
+                  data-en='"Mom, I changed my number. I am in trouble and need an urgent transfer."'>
+              "Mãe, troquei de número. Estou em apuros, preciso de uma transferência urgente."
+            </span>
+          </div>
+        </div>
+
+        <div class="attack-card reveal">
+          <span class="card-icon">🏆</span>
+          <span class="card-tag" data-pt="Isca" data-en="Bait">Isca</span>
+          <h3 data-pt="Prêmio ou Sorteio Falso" data-en="Fake Prize or Lottery">Prêmio ou Sorteio Falso</h3>
+          <p data-pt="Você recebe uma mensagem dizendo que ganhou um prêmio. Para receber, pedem uma taxa, seus dados pessoais ou acesso ao seu celular."
+             data-en="You receive a message saying you won a prize. To claim it, they ask for a fee, your personal data, or access to your phone.">
+            Você recebe uma mensagem dizendo que ganhou um prêmio. Para receber, pedem uma taxa, seus dados pessoais ou acesso ao seu celular.
+          </p>
+          <div class="example-box">
+            <strong data-pt="Exemplo Real" data-en="Real Example">Exemplo Real</strong>
+            <span data-pt='"Parabéns! Pague R$30 de taxa de liberação para receber seu prêmio de R$2.000."'
+                  data-en='"Congratulations! Pay a $10 processing fee to claim your $500 prize."'>
+              "Parabéns! Pague R$30 de taxa de liberação para receber seu prêmio de R$2.000."
+            </span>
+          </div>
+        </div>
+
+        <div class="attack-card reveal">
+          <span class="card-icon">❤️</span>
+          <span class="card-tag" data-pt="Golpe Romântico" data-en="Romance Scam">Golpe Romântico</span>
+          <h3 data-pt="Relacionamento Online Falso" data-en="Fake Online Relationship">Relacionamento Online Falso</h3>
+          <p data-pt="Uma pessoa desconhecida inicia um relacionamento pelas redes sociais. Após ganhar sua confiança, começa a pedir dinheiro com histórias de emergências ou investimentos."
+             data-en="A stranger starts a relationship on social media. After gaining your trust, they begin asking for money with stories of emergencies or investments.">
+            Uma pessoa desconhecida inicia um relacionamento pelas redes sociais. Após ganhar sua confiança, começa a pedir dinheiro com histórias de emergências ou investimentos.
+          </p>
+          <div class="example-box">
+            <strong data-pt="Exemplo Real" data-en="Real Example">Exemplo Real</strong>
+            <span data-pt='Perfil de "engenheiro no exterior" que pede dinheiro para pagar taxas e vir te encontrar.'
+                  data-en='Profile of an "engineer abroad" who asks for money to pay fees and come visit you.'>
+              Perfil de "engenheiro no exterior" que pede dinheiro para pagar taxas e vir te encontrar.
+            </span>
+          </div>
+        </div>
+
+        <div class="attack-card reveal">
+          <span class="card-icon">🖥️</span>
+          <span class="card-tag" data-pt="Suporte Falso" data-en="Fake Support">Suporte Falso</span>
+          <h3 data-pt="Técnico ou Suporte Falso" data-en="Fake Technician or Support">Técnico ou Suporte Falso</h3>
+          <p data-pt="Alguém diz que seu computador está com vírus e pede acesso remoto. Com esse acesso, podem roubar senhas, fotos e dados bancários."
+             data-en="Someone claims your computer has a virus and asks for remote access. With that access, they can steal passwords, photos, and banking information.">
+            Alguém diz que seu computador está com vírus e pede acesso remoto. Com esse acesso, podem roubar senhas, fotos e dados bancários.
+          </p>
+          <div class="example-box">
+            <strong data-pt="Exemplo Real" data-en="Real Example">Exemplo Real</strong>
+            <span data-pt='"Sou do suporte da Microsoft. Instale este programa para eu corrigir seu computador remotamente."'
+                  data-en='"I am from Microsoft support. Install this program so I can fix your computer remotely."'>
+              "Sou do suporte da Microsoft. Instale este programa para eu corrigir seu computador remotamente."
+            </span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       SEÇÃO: COMO SE PROTEGER
+  ══════════════════════════════ -->
+  <section class="section" id="dicas">
+    <div class="page">
+      <div class="page-header reveal">
+        <h2 data-pt="Como se Proteger" data-en="How to Stay Safe">Como se Proteger</h2>
+        <div class="accent-line"></div>
+        <p data-pt="Dicas práticas e simples para você navegar com segurança e não cair em golpes"
+           data-en="Practical and simple tips to browse safely and avoid falling for scams">
+          Dicas práticas e simples para você navegar com segurança e não cair em golpes
+        </p>
+      </div>
+      <div class="tips-grid">
+
+        <div class="tip-card reveal">
+          <span class="tip-icon">🛑</span>
+          <div class="tip-number">01</div>
+          <h3 data-pt="Desconfie da urgência" data-en="Be suspicious of urgency">Desconfie da urgência</h3>
+          <p data-pt="Golpistas criam pânico para que você aja sem pensar. Se alguém pressionar você para agir imediatamente — desligue, feche o site e respire."
+             data-en="Scammers create panic so you act without thinking. If someone pressures you to act immediately — hang up, close the site and breathe.">
+            Golpistas criam pânico para que você aja sem pensar. Se alguém pressionar você para agir imediatamente — desligue, feche o site e respire.
+          </p>
+        </div>
+
+        <div class="tip-card reveal">
+          <span class="tip-icon">✅</span>
+          <div class="tip-number">02</div>
+          <h3 data-pt="Ligue de volta pelo número oficial" data-en="Call back using the official number">Ligue de volta pelo número oficial</h3>
+          <p data-pt="Se o banco ou empresa ligou, desligue e ligue de volta usando o número no verso do cartão ou no site oficial. Nunca use o número que a pessoa te passou."
+             data-en="If a bank or company called you, hang up and call back using the number on your card or the official website. Never use the number the caller gave you.">
+            Se o banco ou empresa ligou, desligue e ligue de volta usando o número no verso do cartão ou no site oficial.
+          </p>
+        </div>
+
+        <div class="tip-card reveal">
+          <span class="tip-icon">🔗</span>
+          <div class="tip-number">03</div>
+          <h3 data-pt="Não clique em links suspeitos" data-en="Don't click suspicious links">Não clique em links suspeitos</h3>
+          <p data-pt="Verifique se o endereço começa com https:// e faz sentido. Em dúvida, acesse o site digitando o endereço diretamente no navegador."
+             data-en="Check that the address starts with https:// and makes sense. When in doubt, access the site by typing the address directly into your browser.">
+            Verifique se o endereço começa com https:// e faz sentido. Em dúvida, acesse o site digitando o endereço diretamente no navegador.
+          </p>
+        </div>
+
+        <div class="tip-card reveal">
+          <span class="tip-icon">🤫</span>
+          <div class="tip-number">04</div>
+          <h3 data-pt="Nunca compartilhe senhas" data-en="Never share your passwords">Nunca compartilhe senhas</h3>
+          <p data-pt="Nenhum banco ou empresa legítima pedirá sua senha por telefone, mensagem ou e-mail. Se alguém pedir, é golpe — ponto final."
+             data-en="No legitimate bank or company will ever ask for your password by phone, message, or email. If someone asks, it is a scam — period.">
+            Nenhum banco ou empresa legítima pedirá sua senha por telefone, mensagem ou e-mail. Se alguém pedir, é golpe — ponto final.
+          </p>
+        </div>
+
+        <div class="tip-card reveal">
+          <span class="tip-icon">📵</span>
+          <div class="tip-number">05</div>
+          <h3 data-pt="Não instale programas de estranhos" data-en="Don't install programs from strangers">Não instale programas de estranhos</h3>
+          <p data-pt="Se alguém pedir para instalar um aplicativo de acesso remoto, recuse. O golpista poderá ver e controlar tudo no seu dispositivo."
+             data-en="If someone asks you to install a remote access app, refuse. The scammer will be able to see and control everything on your device.">
+            Se alguém pedir para instalar um aplicativo de acesso remoto, recuse. O golpista poderá ver e controlar tudo no seu dispositivo.
+          </p>
+        </div>
+
+        <div class="tip-card reveal">
+          <span class="tip-icon">👨‍👩‍👧</span>
+          <div class="tip-number">06</div>
+          <h3 data-pt="Confirme antes de transferir" data-en="Confirm before transferring money">Confirme antes de transferir</h3>
+          <p data-pt="Recebeu mensagem de familiar pedindo dinheiro urgente? Ligue para o número antigo ou para outro familiar antes de transferir qualquer valor."
+             data-en="Received a message from a relative asking for urgent money? Call their old number or another family member before transferring anything.">
+            Recebeu mensagem de familiar pedindo dinheiro urgente? Ligue para o número antigo ou para outro familiar antes de transferir qualquer valor.
+          </p>
+        </div>
+
+        <div class="tip-card reveal">
+          <span class="tip-icon">🔒</span>
+          <div class="tip-number">07</div>
+          <h3 data-pt="Use senhas diferentes para cada conta" data-en="Use different passwords for each account">Use senhas diferentes para cada conta</h3>
+          <p data-pt="Evite usar a mesma senha para banco, e-mail e redes sociais. Se sentir dificuldade, anote em um caderno físico em lugar seguro."
+             data-en="Avoid using the same password for your bank, email, and social media. If it feels hard to manage, write them in a physical notebook kept somewhere safe.">
+            Evite usar a mesma senha para banco, e-mail e redes sociais. Se sentir dificuldade, anote em um caderno físico em lugar seguro.
+          </p>
+        </div>
+
+        <div class="tip-card reveal">
+          <span class="tip-icon">🆘</span>
+          <div class="tip-number">08</div>
+          <h3 data-pt="Peça ajuda a alguém de confiança" data-en="Ask someone you trust for help">Peça ajuda a alguém de confiança</h3>
+          <p data-pt="Se receber algo suspeito, chame um filho, sobrinho ou amigo antes de tomar qualquer atitude. Nunca há vergonha em pedir uma segunda opinião."
+             data-en="If you receive something suspicious, call a child, nephew, or trusted friend before doing anything. There is never shame in asking for a second opinion.">
+            Se receber algo suspeito, chame um filho, sobrinho ou amigo antes de tomar qualquer atitude. Nunca há vergonha em pedir uma segunda opinião.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       SEÇÃO: CHECKLIST
+  ══════════════════════════════ -->
+  <section class="section" id="checklist">
+    <div class="page">
+      <div class="page-header reveal">
+        <h2 data-pt="Meu Checklist de Segurança" data-en="My Security Checklist">Meu Checklist de Segurança</h2>
+        <div class="accent-line"></div>
+        <p data-pt="Clique em cada item conforme você for fazendo. Seja honesto — é para o seu bem!"
+           data-en="Click each item as you complete it. Be honest — it is for your own good!">
+          Clique em cada item conforme você for fazendo. Seja honesto — é para o seu bem!
+        </p>
+      </div>
+
+      <div class="checklist-wrap reveal">
+        <div class="progress-label" id="progress-label">0 de 8 concluídos</div>
+        <div class="checklist-progress">
+          <div class="checklist-progress-bar" id="progress-bar" style="width:0%"></div>
+        </div>
+
+        <div class="check-item" onclick="toggleCheck(this)">
+          <div class="check-box"></div>
+          <div class="check-content">
+            <h4 data-pt="Tenho uma senha diferente para cada conta importante" data-en="I have a different password for each important account">Tenho uma senha diferente para cada conta importante</h4>
+            <p data-pt="Banco, e-mail e redes sociais com senhas diferentes." data-en="Bank, email and social media with different passwords.">Banco, e-mail e redes sociais com senhas diferentes.</p>
+          </div>
+        </div>
+
+        <div class="check-item" onclick="toggleCheck(this)">
+          <div class="check-box"></div>
+          <div class="check-content">
+            <h4 data-pt="Nunca compartilho minha senha com ninguém" data-en="I never share my password with anyone">Nunca compartilho minha senha com ninguém</h4>
+            <p data-pt="Nem por telefone, mensagem ou e-mail." data-en="Not by phone, message, or email.">Nem por telefone, mensagem ou e-mail.</p>
+          </div>
+        </div>
+
+        <div class="check-item" onclick="toggleCheck(this)">
+          <div class="check-box"></div>
+          <div class="check-content">
+            <h4 data-pt="Verifico o remetente antes de abrir e-mails" data-en="I check the sender before opening emails">Verifico o remetente antes de abrir e-mails</h4>
+            <p data-pt="Confirmo se o endereço é o oficial da empresa." data-en="I confirm whether the address is the company's official one.">Confirmo se o endereço é o oficial da empresa.</p>
+          </div>
+        </div>
+
+        <div class="check-item" onclick="toggleCheck(this)">
+          <div class="check-box"></div>
+          <div class="check-content">
+            <h4 data-pt="Não clico em links de mensagens suspeitas" data-en="I don't click links in suspicious messages">Não clico em links de mensagens suspeitas</h4>
+            <p data-pt="Acesso o site oficial digitando o endereço direto no navegador." data-en="I access the official site by typing the address directly in my browser.">Acesso o site oficial digitando o endereço direto no navegador.</p>
+          </div>
+        </div>
+
+        <div class="check-item" onclick="toggleCheck(this)">
+          <div class="check-box"></div>
+          <div class="check-content">
+            <h4 data-pt="Quando tenho dúvida, ligo no número oficial" data-en="When in doubt, I call the official number">Quando tenho dúvida, ligo no número oficial</h4>
+            <p data-pt="O número que está no cartão do banco ou no site oficial." data-en="The number on my bank card or on the official website.">O número que está no cartão do banco ou no site oficial.</p>
+          </div>
+        </div>
+
+        <div class="check-item" onclick="toggleCheck(this)">
+          <div class="check-box"></div>
+          <div class="check-content">
+            <h4 data-pt="Nunca faço transferências sem confirmar com a pessoa" data-en="I never transfer money without confirming with the person">Nunca faço transferências sem confirmar com a pessoa</h4>
+            <p data-pt="Confirmo por ligação ou pessoalmente antes de enviar qualquer valor." data-en="I confirm by call or in person before sending any amount.">Confirmo por ligação ou pessoalmente antes de enviar qualquer valor.</p>
+          </div>
+        </div>
+
+        <div class="check-item" onclick="toggleCheck(this)">
+          <div class="check-box"></div>
+          <div class="check-content">
+            <h4 data-pt="Não instalo programas pedidos por desconhecidos" data-en="I don't install programs requested by strangers">Não instalo programas pedidos por desconhecidos</h4>
+            <p data-pt="Especialmente aplicativos de suporte técnico ou acesso remoto." data-en="Especially technical support or remote access applications.">Especialmente aplicativos de suporte técnico ou acesso remoto.</p>
+          </div>
+        </div>
+
+        <div class="check-item" onclick="toggleCheck(this)">
+          <div class="check-box"></div>
+          <div class="check-content">
+            <h4 data-pt="Tenho alguém de confiança para pedir ajuda" data-en="I have a trusted person to ask for help">Tenho alguém de confiança para pedir ajuda</h4>
+            <p data-pt="Um familiar ou amigo que posso chamar quando tiver dúvida." data-en="A family member or friend I can call when I have doubts.">Um familiar ou amigo que posso chamar quando tiver dúvida.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       SEÇÃO: SOBRE
+  ══════════════════════════════ -->
+  <section class="section" id="sobre">
+    <div class="page">
+      <div class="page-header reveal">
+        <h2 data-pt="Sobre o Projeto" data-en="About the Project">Sobre o Projeto</h2>
+        <div class="accent-line"></div>
+      </div>
+
+      <div class="about-wrapper">
+        <div class="about-card reveal">
+          <div class="about-avatar">👨‍💻</div>
+          <div class="about-info">
+            <h3>Carlos Lavigne</h3>
+            <div class="about-role"
+              data-pt="Engenharia da Computação — GranFaculdade"
+              data-en="Computer Engineering — GranFaculdade">
+              Engenharia da Computação — GranFaculdade
+            </div>
+            <p data-pt="Profissional em transição para a tecnologia com uma trajetória que cruza fronteiras: formado em Relações Internacionais e atualmente cursando Engenharia da Computação, Carlos combina visão global, comunicação bilíngue e habilidades técnicas para criar soluções com impacto real."
+               data-en="A professional transitioning into technology with a cross-border background: holding a degree in International Relations and currently studying Computer Engineering, Carlos combines a global mindset, bilingual communication, and technical skills to build solutions with real-world impact.">
+              Profissional em transição para a tecnologia com uma trajetória que cruza fronteiras: formado em Relações Internacionais e atualmente cursando Engenharia da Computação, Carlos combina visão global, comunicação bilíngue e habilidades técnicas para criar soluções com impacto real.
+            </p>
+            <p data-pt="Com experiência em suporte técnico bilíngue e desenvolvimento de software, trabalha com Java, Node.js e Python. Acredita que a tecnologia só faz sentido quando está acessível a todos — e este projeto nasceu exatamente dessa convicção: usar o conhecimento técnico para proteger quem mais precisa de informação clara e confiável no ambiente digital."
+               data-en="With experience in bilingual technical support and software development, he works with Java, Node.js, and Python. He believes technology only makes sense when accessible to everyone — and this project was born from exactly that conviction: using technical knowledge to protect those who most need clear and trustworthy information in the digital world.">
+              Com experiência em suporte técnico bilíngue e desenvolvimento de software, trabalha com Java, Node.js e Python. Acredita que a tecnologia só faz sentido quando está acessível a todos — e este projeto nasceu exatamente dessa convicção: usar o conhecimento técnico para proteger quem mais precisa de informação clara e confiável no ambiente digital.
+            </p>
+
+            <div class="about-tags">
+              <span class="about-tag" data-pt="Cibersegurança"        data-en="Cybersecurity">Cibersegurança</span>
+              <span class="about-tag" data-pt="Extensão Universitária" data-en="University Extension">Extensão Universitária</span>
+              <span class="about-tag" data-pt="Relações Internacionais" data-en="International Relations">Relações Internacionais</span>
+              <span class="about-tag" data-pt="Comunicação Bilíngue"  data-en="Bilingual Communication">Comunicação Bilíngue</span>
+            </div>
+
+            <div class="tech-label" data-pt="Tecnologias" data-en="Technologies">Tecnologias</div>
+            <div class="skills-row">
+              <span class="skill-tag">Java</span>
+              <span class="skill-tag">Node.js</span>
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">HTML/CSS</span>
+              <span class="skill-tag">JavaScript</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-note reveal">
+          <h4 data-pt="📚 Sobre este Site" data-en="📚 About this Website">📚 Sobre este Site</h4>
+          <p data-pt="Este site foi desenvolvido como atividade extensionista universitária com o objetivo de informar e conscientizar pessoas — especialmente aquelas com mais de 50 anos — sobre os riscos da engenharia social e os golpes digitais. O conteúdo é apresentado de forma simples e acessível para que qualquer pessoa possa compreender e se proteger, independentemente de sua familiaridade com tecnologia."
+             data-en="This website was developed as a university extension project with the goal of informing and raising awareness — especially among people over 50 — about the risks of social engineering and digital scams. The content is presented in a simple and accessible way so anyone can understand and protect themselves, regardless of their familiarity with technology.">
+            Este site foi desenvolvido como atividade extensionista universitária com o objetivo de informar e conscientizar pessoas — especialmente aquelas com mais de 50 anos — sobre os riscos da engenharia social e os golpes digitais. O conteúdo é apresentado de forma simples e acessível para que qualquer pessoa possa compreender e se proteger, independentemente de sua familiaridade com tecnologia.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       RODAPÉ
+  ══════════════════════════════ -->
+  <footer>
+    <p data-pt="🔐 Segurança Digital — Atividade Extensionista | Carlos Lavigne · GranFaculdade"
+       data-en="🔐 Digital Security — University Extension | Carlos Lavigne · GranFaculdade">
+      🔐 Segurança Digital — Atividade Extensionista &nbsp;|&nbsp; Carlos Lavigne · GranFaculdade
+    </p>
+    <p style="margin-top:.5rem"
+       data-pt="Vítima de golpe? Ligue 197 (Polícia Civil) ou 151 (Procon)."
+       data-en="Victim of a scam? Call 197 (Civil Police) or 151 (Consumer Protection).">
+      Vítima de golpe? Ligue <strong>197</strong> (Polícia Civil) ou <strong>151</strong> (Procon).
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
