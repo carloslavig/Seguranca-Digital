@@ -222,13 +222,15 @@ document.querySelectorAll('[data-nav]').forEach(el => {
 ## 👥 Autores
 
 **Carlos Lavigne**
-Desenvolvedor em formação com background em Relações Internacionais e experiência em suporte técnico bilíngue. Acredita que tecnologia só faz sentido quando está acessível a todos.
+Técnico em Informática pelo IFBA, formado em Relações Internacionais pela UNINTER e atualmente cursando Engenharia de Software na GranFaculdade. Com mais de 13 anos como Técnico de TI autônomo, passagens como Analista Bilíngue na Foundever e sócio-fundador da F5s Desenvolvimento, chegou ao desenvolvimento de software por um caminho que combina técnica, estratégia e cuidado com as pessoas. Atualmente aprofunda seus conhecimentos em Java, Node.js e Python.
 
 - GitHub: [@carloslavig](https://github.com/carloslavig)
 - LinkedIn: [linkedin.com/in/carloslavig](https://www.linkedin.com/in/carloslavig/)
 
-**Janaína Santos Mendes**
-Integrante do projeto extensionista, responsável pela pesquisa de conteúdo e comunicação com o público-alvo. Sua sensibilidade para entender as necessidades das pessoas mais vulneráveis ao ambiente digital foi essencial para tornar as informações do site claras, humanas e acessíveis.
+**Janaína Mendes**
+Formada em Direito pela UniCathedral e atualmente cursando Análise e Desenvolvimento de Sistemas na GranFaculdade. Sua combinação de formação jurídica e tecnológica é um diferencial central neste projeto — permitindo tratar os golpes digitais não apenas como um problema técnico, mas também como uma questão legal e de direitos. Contribui com pesquisa de conteúdo, curadoria jurídica e comunicação com o público-alvo.
+
+- LinkedIn: [linkedin.com/in/janaína-mendes](https://www.linkedin.com/in/jana%C3%ADna-mendes-b1655b207/)
 
 ---
 
